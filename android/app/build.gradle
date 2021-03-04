@@ -21,10 +21,11 @@ if (flutterVersionName == null) {
     flutterVersionName = '1.0'
 }
 
-apply plugin: 'com.google.gms.google-services' //this line
+
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
+apply plugin: 'com.google.gms.google-services' //this line
 
 android {
     compileSdkVersion 29
@@ -70,4 +71,5 @@ dependencies {
     implementation 'com.google.firebase:firebase-firestore:22.1.1'
     //For Firebase Firestore Database Service
     implementation 'com.android.support:multidex:2.0.1'
+    implementation 'androidx.browser:browser:1.2.0'
 }

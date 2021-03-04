@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "565540035392",
+    "firebase_url": "https://beuniquegroup-f47c0-default-rtdb.firebaseio.com",
     "project_id": "beuniquegroup-f47c0",
     "storage_bucket": "beuniquegroup-f47c0.appspot.com"
   },
@@ -13,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "565540035392-i7886m42a7ncclnnpks1pbokoj3l1j9l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.beunique",
+            "certificate_hash": "9928d803ea584df3cbfb317a57562145770e97a6"
+          }
+        },
         {
           "client_id": "565540035392-8fqk47h3c4pllqol7l1kqrrtod6va1lp.apps.googleusercontent.com",
           "client_type": 3
