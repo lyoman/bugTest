@@ -28,7 +28,7 @@ class _OTPScreenState extends State<VerificationScreen> {
     return Scaffold(
       key: _scaffoldkey,
       appBar: AppBar(
-        title: Text('OTP Verification'),
+        title: Text('Verification Code'),
       ),
       body: Column(
         children: [
@@ -36,23 +36,23 @@ class _OTPScreenState extends State<VerificationScreen> {
             margin: EdgeInsets.only(top: 40),
             child: Center(
               child: Text(
-                'Verify +263-${widget.phone}',
+                'Please type verification code sent to +971-${widget.phone}',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 26),
               ),
             ),
           ),
           // Container(
-          RaisedButton(
-            color: Colors.amber,
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => HomeScreen(title: "Home Page")),
-              );
-            },
-            child: Text('Navigate'),
-          ),
+          // RaisedButton(
+          //   color: Colors.amber,
+          //   onPressed: () {
+          //     Navigator.push(
+          //       context,
+          //       MaterialPageRoute(
+          //           builder: (context) => HomeScreen(title: "Home Page")),
+          //     );
+          //   },
+          //   child: Text('Navigate'),
+          // ),
           // ),
           Padding(
             padding: const EdgeInsets.all(30.0),
@@ -83,7 +83,7 @@ class _OTPScreenState extends State<VerificationScreen> {
                 } catch (e) {
                   FocusScope.of(context).unfocus();
                   _scaffoldkey.currentState
-                      .showSnackBar(SnackBar(content: Text('invalid OTP')));
+                      .showSnackBar(SnackBar(content: Text('Error Please try again')));
                 }
               },
             ),
@@ -95,7 +95,7 @@ class _OTPScreenState extends State<VerificationScreen> {
 
   _verifyPhone() async {
     await FirebaseAuth.instance.verifyPhoneNumber(
-        phoneNumber: '+263${widget.phone}',
+        phoneNumber: '+971${widget.phone}',
         verificationCompleted: (PhoneAuthCredential credential) async {
           await FirebaseAuth.instance
               .signInWithCredential(credential)

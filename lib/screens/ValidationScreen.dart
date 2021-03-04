@@ -17,21 +17,21 @@ class _ValidationScreenState extends State<ValidationScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Phone Auth'),
+        title: Text('Phone Validation'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Column(children: [
-            Container(
-              margin: EdgeInsets.only(top: 60),
-              child: Center(
-                child: Text(
-                  'Phone Authentication',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28),
-                ),
-              ),
-            ),
+            // Container(
+            //   margin: EdgeInsets.only(top: 60),
+            //   child: Center(
+            //     child: Text(
+            //       'Phone Validation',
+            //       style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28),
+            //     ),
+            //   ),
+            // ),
             Container(
               margin: EdgeInsets.only(top: 40, right: 10, left: 10),
               child: TextField(
@@ -39,7 +39,7 @@ class _ValidationScreenState extends State<ValidationScreen> {
                   hintText: 'Phone Number',
                   prefix: Padding(
                     padding: EdgeInsets.all(4),
-                    child: Text('+263'),
+                    child: Text('+971'),
                   ),
                 ),
                 maxLength: 10,
@@ -49,16 +49,16 @@ class _ValidationScreenState extends State<ValidationScreen> {
             )
           ]),
           Container(
-            margin: EdgeInsets.all(10),
+            margin: EdgeInsets.all(40),
             width: double.infinity,
             child: FlatButton(
-              color: Colors.blue,
+              color: Color.fromRGBO(80,192,168,1),
               onPressed: () {
                 Navigator.of(context).push(MaterialPageRoute(
                     builder: (context) => VerificationScreen(_controller.text)));
               },
               child: Text(
-                'Next',
+                'Confirm Code',
                 style: TextStyle(color: Colors.white),
               ),
             ),
